@@ -1,0 +1,153 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(141deg, #acf7ae, #af3d3d, #aae8e8, #ea9be6, #f25570, #f3bd0c);
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* TÍTULO */
+h1 {
+    background-color: antiquewhite;
+    color: #333;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+/* INPUTS */
+input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    border: 1px solid #f6f2f2;
+    border-radius: 5px;
+}
+
+input {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* BOTONES */
+button {
+    padding: 10px 20px;
+    background-color: #95cafb;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6184b5;
+}
+
+/* CONTENEDOR DE GALERÍA */
+#galeriaImagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+/* TARJETAS */
+#galeriaImagenes div {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 15px);
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* IMÁGENES */
+#galeriaImagenes img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+/* TEXTO */
+#galeriaImagenes p {
+    color: #8e2455;
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+/* TABLETAS */
+@media (max-width: 900px) {
+    #galeriaImagenes div {
+        width: calc(50% - 10px);
+    }
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #galeriaImagenes {
+        gap: 12px;
+        padding: 5px;
+    }
+
+    #galeriaImagenes div {
+        width: calc(50% - 6px);
+        padding: 8px;
+    }
+
+    #galeriaImagenes img {
+        height: 160px;
+    }
+
+    #galeriaImagenes p {
+        font-size: 14px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
+
+/* CELULARES MUY PEQUEÑOS */
+@media (max-width: 360px) {
+    #galeriaImagenes div {
+        width: 100%;
+    }
+
+    #galeriaImagenes img {
+        height: 190px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
